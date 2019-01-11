@@ -1,0 +1,6 @@
+node_modules/
+bower_components/
+#startup.sh
+startup.bat
+.lock
+.DS_Store
