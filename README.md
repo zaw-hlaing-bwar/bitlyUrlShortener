@@ -19,10 +19,20 @@ And import the package in your project directory
 const bitlyUrl = require('bitlyurl')
 ```
 
+Before using the bitlyShortenUrl function, YOU MUST HAVE THE BITLY ACCESS TOKEN TO GENERATE BITLY LINKS
+
+1) First, go to bitly website and login or create your account
+
+2) Second, go to your account profile and GENERIC ACCESS TOKEN
+
+![GENERIC ACCESS TOKEN](https://user-images.githubusercontent.com/18108171/65507521-24112280-def4-11e9-874e-047727ac444c.png)
+
+3) Copy the access token and pass with function call.
+
 Then, call the **bitlyShortenUrl** async function and pass the correct url
 
 ```
-bitlyUrl.bitlyShortenUrl("https://www.youtube.com/watch?v=3I78ELjTzlQ&feature=youtu.be").then((data) => {
+bitlyUrl.bitlyShortenUrl("https://www.youtube.com/watch?v=3I78ELjTzlQ&feature=youtu.be", accessToken).then((data) => {
 	console.log(data)
 })
 ```

@@ -2,7 +2,7 @@ const Promise = require('bluebird');
 const request = Promise.promisifyAll(require('request'));
 
 class ShortenUrlService {
-  constructor() {
+  constructor(apiKey) {
     this.urls = {
       base: 'https://api-ssl.bitly.com/v4/',
       group: 'groups',
@@ -11,7 +11,7 @@ class ShortenUrlService {
 
     this.props = {
       headers: {
-        'Authorization': 'Bearer d228062d25871333b22731d4668c6c9cb0f741d5',
+        'Authorization': `Bearer ${apiKey}`,
         'Accept': 'application/json'
       }
     }
